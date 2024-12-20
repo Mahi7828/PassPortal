@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.navbar {
+  background-color: white;
+  color: black;
+  padding: 1vh 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-family: "Poppins", serif;
+  z-index: 100;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger .bar.open {
+  background-color: black;
+  transform: rotate(45deg);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  font-family: "Poppins", serif;
+  text-decoration: none;
+  font-size: 1vw;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.pass {
+  padding: 1vh 2vw;
+  background-color: #013dc5;
+  border-radius: 1vw;
+}
+.pass:hover {
+  background-color: #ff7a5d;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    width: 80vw;
+  }
+
+  .nav-links a {
+    font-size: 5vw;
+    text-align: center;
+  }
+  .logo {
+    font-size: 5vw;
+  }
+}
